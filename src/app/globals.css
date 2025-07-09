@@ -19,8 +19,30 @@
   --foreground: #171717;
 }
 
+/* Base (mobile first) */
 html {
-  font-size: 16px;
+  font-size: 12px;
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Laptops and up */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 /* @theme inline {
@@ -32,6 +54,7 @@ html {
 
 @theme {
   --color-main-purple: #7843e9;
+  --color-main-gray: #333;
   --color-custom-blue: oklch(0.72 0.11 178);
 }
 
@@ -47,6 +70,10 @@ body {
 
 .transition-300 {
   @apply transition-all duration-300 ease-in-out;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
 }
 
 .nav-box-shadow {

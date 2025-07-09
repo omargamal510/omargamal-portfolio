@@ -16,7 +16,7 @@ const Navbar = () => {
           decoding="async"
           className="w-12 rounded-full"
         />
-        <h1 className="font-bold tracking-[1px] uppercase transition-300 text-lg text-[#333]">
+        <h1 className="font-bold tracking-[1px] uppercase transition-300 text-lg text-main-gray">
           Omar Gamal
         </h1>
       </Link>
