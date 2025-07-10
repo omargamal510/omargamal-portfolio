@@ -1,3 +1,4 @@
+import Observer from "@/ui/Observer";
 import PurpleButton from "@/ui/PurpleButton";
 import SectionHeader from "@/ui/SectionHeader";
 import SkillBox from "@/ui/SkillBox";
@@ -37,50 +38,57 @@ const skills: SkillsArray[] = [
 const About = () => {
   return (
     <div className="bg-white-gray">
-      <SectionHeader
-        title="about me"
-        description="Learn more about me, my background, and the tools I use to build scalable, user-friendly and responsive web apps."
-      />
+      <Observer yaxis={true}>
+        <SectionHeader
+          title="about me"
+          description="Learn more about me, my background, and the tools I use to build scalable, user-friendly and responsive web apps."
+        />
+      </Observer>
 
-      <div className="flex flex-col md:flex-row gap-14">
+      <div className="flex flex-col md:flex-row gap-20">
         <div className="w-full flex flex-col gap-5">
           <h3 className="text-2xl font-bold">Know me better !</h3>
-          <div className="flex flex-col gap-5 text-secondary-gray">
-            <p>
-              I'm a <strong>Frontend Web Developer</strong> with a strong focus
-              on building and maintaining the user interface of modern websites
-              and applications. My goal is to create clean, efficient, and
-              engaging experiences that support the success of digital products.
-              You can explore some of my recent work in the{" "}
-              <strong>Projects</strong> section.
-            </p>
+          <div>
+            <Observer
+              yaxis={true}
+              className="flex flex-col gap-5 text-secondary-gray"
+            >
+              <p>
+                I'm a <strong>Frontend Web Developer</strong> with a strong
+                focus on building and maintaining the user interface of modern
+                websites and applications. My goal is to create clean,
+                efficient, and engaging experiences that support the success of
+                digital products. You can explore some of my recent work in the{" "}
+                <strong>Projects</strong> section.
+              </p>
 
-            <p>
-              I enjoy sharing what I learn in web development to support and
-              connect with other developers. I regularly post insights, tips,
-              and resources on{" "}
-              <a
-                className="text-main-purple font-bold underline"
-                href="https://www.linkedin.com/in/omar-gamal-98881b14b/"
-                target="_blank"
-              >
-                LinkedIn
-              </a>{" "}
-              and you can check more about my projects through{" "}
-              <a
-                className="text-main-purple font-bold underline"
-                href="https://github.com/omargamal510"
-                target="_blank"
-              >
-                Github
-              </a>{" "}
-            </p>
+              <p>
+                I enjoy sharing what I learn in web development to support and
+                connect with other developers. I regularly post insights, tips,
+                and resources on{" "}
+                <a
+                  className="text-main-purple font-bold underline"
+                  href="https://www.linkedin.com/in/omar-gamal-98881b14b/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>{" "}
+                and you can check more about my projects through{" "}
+                <a
+                  className="text-main-purple font-bold underline"
+                  href="https://github.com/omargamal510"
+                  target="_blank"
+                >
+                  Github
+                </a>{" "}
+              </p>
 
-            <p>
-              I'm currently open to new roles where I can apply my skills, grow
-              professionally, and be part of meaningful projects. If you think
-              I’d be a good fit for your team, feel free to contact me{" "}
-            </p>
+              <p>
+                I'm currently open to new roles where I can apply my skills,
+                grow professionally, and be part of meaningful projects. If you
+                think I’d be a good fit for your team, feel free to contact me{" "}
+              </p>
+            </Observer>
           </div>
 
           <PurpleButton text="contact" href="/" />
@@ -89,7 +97,9 @@ const About = () => {
           <h3 className="text-2xl font-bold">My Skills</h3>
           <div className="flex flex-wrap gap-3">
             {skills.map(({ name, color }, index) => (
-              <SkillBox skill={name} key={name} color={color} />
+              <Observer key={name}>
+                <SkillBox skill={name} color={color} />
+              </Observer>
             ))}
           </div>
         </div>
