@@ -35,7 +35,7 @@ const SmNav = () => {
         {NavbarLinks.map((e) => (
           <Link
             href={"/"}
-            className="py-3 block font-bold cursor-pointer px-12 border-1 transition-300 hover:text-main-purple border-gray-100"
+            className="py-3 block text-lg font-bold cursor-pointer px-12 border-1 transition-300 hover:text-main-purple border-gray-100"
             key={e}
           >
             {e}

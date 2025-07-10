@@ -6,7 +6,7 @@ export const NavbarLinks: string[] = ["Home", "About", "Projects", "Contact"];
 
 const Navbar = () => {
   return (
-    <nav className="fixed inset-0 bg-white z-10 flex justify-between h-20 items-center px-12 nav-box-shadow">
+    <nav className="fixed inset-0 bg-white z-10 flex justify-between h-20 items-center px-5 md:px-12 nav-box-shadow">
       <Link
         href={"/"}
         className="flex hover:[&>*]:text-main-purple gap-2 items-center cursor-pointer"
@@ -19,7 +19,7 @@ const Navbar = () => {
             className="border-1 size-full rounded-full"
           />
         </div>
-        <h1 className="font-bold tracking-[1px] uppercase transition-300 text-lg text-main-gray">
+        <h1 className="font-bold tracking-[1px] uppercase transition-300 text-xl text-main-gray">
           Omar Gamal
         </h1>
       </Link>

@@ -1,4 +1,5 @@
 import HeroHeader from "@/components/Hero/HeroHeader";
+import PurpleButton from "@/ui/PurpleButton";
 import Image from "next/image";
 
 const Hero = () => {
@@ -12,7 +13,7 @@ const Hero = () => {
       />
 
       <div className="overlay absolute inset-0 bg-gray-200/70 flex-center flex-col gap-8">
-        <h1 className="text-[2.5rem] text-center font-black uppercase">
+        <h1 className="text-[2.5rem]  px-20 text-center font-black uppercase">
           <HeroHeader textProp="Hello , I'm Omar Gamal" />
         </h1>
         <p className="text-center text-[1.2rem] px-10 text-main-gray leading-8">
@@ -21,9 +22,7 @@ const Hero = () => {
           applications that drive performance and product success.
         </p>
 
-        <button className="bg-main-purple font-bold uppercase text-white px-16 py-3 rounded-lg cursor-pointer">
-          Projects
-        </button>
+        <PurpleButton text="projects" href="/" />
       </div>
     </div>
   );

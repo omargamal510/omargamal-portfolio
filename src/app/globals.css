@@ -21,22 +21,22 @@
 
 /* Base (mobile first) */
 html {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* Tablets and up */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   html {
     font-size: 14px;
   }
-}
+} */
 
 /* Laptops and up */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   html {
     font-size: 16px;
   }
-}
+} */
 
 /* Desktops */
 @media (min-width: 1280px) {
@@ -55,6 +55,9 @@ html {
 @theme {
   --color-main-purple: #7843e9;
   --color-main-gray: #333;
+  --color-secondary-gray: #666;
+  --color-opacity-gray: #99999933;
+  --color-white-gray: #fafafa;
   --color-custom-blue: oklch(0.72 0.11 178);
 }
 
