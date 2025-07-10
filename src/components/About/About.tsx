@@ -54,7 +54,7 @@ const About = () => {
               className="flex flex-col gap-5 text-secondary-gray"
             >
               <p>
-                I'm a <strong>Frontend Web Developer</strong> with a strong
+                I&#39;m a <strong>Frontend Web Developer</strong> with a strong
                 focus on building and maintaining the user interface of modern
                 websites and applications. My goal is to create clean,
                 efficient, and engaging experiences that support the success of
