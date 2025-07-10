@@ -28,7 +28,7 @@ const SmNav = () => {
       <div
         ref={smNavRef}
         style={{ direction: "rtl" }}
-        className={`absolute bg-white  left-0  right-0 top-20 transition-500 ${
+        className={`absolute bg-white left-0 right-0 top-20 transition-500 ${
           isOpen ? "block" : "hidden"
         } opacity-0`}
       >

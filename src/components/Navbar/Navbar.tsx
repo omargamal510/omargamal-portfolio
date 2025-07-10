@@ -1,21 +1,24 @@
 import SmNav from "@/components/Navbar/SmNav";
+import Image from "next/image";
 import Link from "next/link";
 
 export const NavbarLinks: string[] = ["Home", "About", "Projects", "Contact"];
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between h-20 items-center px-12 nav-box-shadow">
+    <nav className="fixed inset-0 bg-white z-10 flex justify-between h-20 items-center px-12 nav-box-shadow">
       <Link
         href={"/"}
         className="flex hover:[&>*]:text-main-purple gap-2 items-center cursor-pointer"
       >
-        <img
-          src={"/github-image-profile.jpg"}
-          loading="lazy"
-          decoding="async"
-          className="w-12 rounded-full"
-        />
+        <div className="relative size-12">
+          <Image
+            alt="omar gamal"
+            src={"/github-image-profile.jpg"}
+            fill
+            className="border-1 size-full rounded-full"
+          />
+        </div>
         <h1 className="font-bold tracking-[1px] uppercase transition-300 text-lg text-main-gray">
           Omar Gamal
         </h1>
