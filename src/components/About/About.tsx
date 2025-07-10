@@ -84,9 +84,10 @@ const About = () => {
               </p>
 
               <p>
-                I'm currently open to new roles where I can apply my skills,
+                I&#39;m currently open to new roles where I can apply my skills,
                 grow professionally, and be part of meaningful projects. If you
-                think I’d be a good fit for your team, feel free to contact me{" "}
+                think I&rsquo;d be a good fit for your team, feel free to
+                contact me{" "}
               </p>
             </Observer>
           </div>
@@ -96,7 +97,7 @@ const About = () => {
         <div className="w-full flex flex-col gap-5">
           <h3 className="text-2xl font-bold">My Skills</h3>
           <div className="flex flex-wrap gap-3">
-            {skills.map(({ name, color }, index) => (
+            {skills.map(({ name, color }) => (
               <Observer key={name}>
                 <SkillBox skill={name} color={color} />
               </Observer>

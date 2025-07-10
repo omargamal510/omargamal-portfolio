@@ -21,6 +21,8 @@ const Observer = ({ children, yaxis = false, className }: ObserverProps) => {
               `!translate-y-0`,
               "opacity-100"
             );
+
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -38,7 +40,7 @@ const Observer = ({ children, yaxis = false, className }: ObserverProps) => {
         if (el) observer.unobserve(el);
       });
     };
-  }, []);
+  }, [children]);
 
   return (
     <div className={className}>

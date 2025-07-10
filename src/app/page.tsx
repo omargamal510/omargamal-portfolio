@@ -1,6 +1,5 @@
 import About from "@/components/About/About";
 import Hero from "@/components/Hero/Hero";
-import Observer from "@/ui/Observer";
 
 export default function Home() {
   return (
