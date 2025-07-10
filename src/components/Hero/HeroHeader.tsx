@@ -1,7 +1,6 @@
 "use client";
 
 import { useTypeWriter } from "@/hooks/useTypeWriter";
-import { useEffect, useState } from "react";
 
 interface Iprops {
   textProp: string;

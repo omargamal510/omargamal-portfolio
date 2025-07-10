@@ -10,7 +10,7 @@ export const useTypeWriter = (
     setTextState([]);
     let index: number = 0;
 
-    let interval = setInterval(() => {
+    const interval = setInterval(() => {
       if (index < textProp.length) {
         setTextState((prev) => [...prev, textProp[index - 1]]);
         index++;
@@ -20,7 +20,7 @@ export const useTypeWriter = (
     }, speed);
 
     return () => clearInterval(interval);
-  }, [textProp]);
+  }, [textProp, speed]);
 
   return { text: textState.join("") };
 };

@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 
 const SmNav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const smNavRef: any = useRef(null);
+  const smNavRef = useRef<HTMLDivElement | null>(null);
 
   function fadeInNav() {
     setIsOpen((prev) => !prev);
