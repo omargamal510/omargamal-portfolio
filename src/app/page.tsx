@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"; // ⬅️ this disables static rendering
+
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
 import Hero from "@/components/Hero/Hero";
