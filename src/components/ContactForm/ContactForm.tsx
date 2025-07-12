@@ -86,7 +86,7 @@ const ContactForm = () => {
             <textarea
               name="message"
               maxLength={500}
-              className="text-sm outline-0 max-h-[400px] min-h-[200px] bg-gray-100 py-5 rounded-lg px-2 w-full"
+              className="text-sm outline-0 max-h-[400px] min-h-[200px] bg-gray-100 py-3 md:py-5 rounded-lg px-2 w-full"
               placeholder={placeholder}
               value={form.message}
               onChange={handleChange}
@@ -96,7 +96,7 @@ const ContactForm = () => {
             <input
               required
               name={type === "email" ? "email" : "name"}
-              className="text-sm outline-0 bg-gray-100 py-5 font-medium rounded-lg px-2 w-full"
+              className="text-sm outline-0 bg-gray-100 py-3 md:py-5 font-medium rounded-lg px-2 w-full"
               type={type}
               placeholder={placeholder}
               value={type === "email" ? form.email : form.name}
