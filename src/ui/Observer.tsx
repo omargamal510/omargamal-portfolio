@@ -6,9 +6,15 @@ interface ObserverProps {
   children: React.ReactNode;
   yaxis?: boolean;
   className?: string;
+  style?: any;
 }
 
-const Observer = ({ children, yaxis = false, className }: ObserverProps) => {
+const Observer = ({
+  children,
+  yaxis = false,
+  className,
+  style,
+}: ObserverProps) => {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -43,7 +49,7 @@ const Observer = ({ children, yaxis = false, className }: ObserverProps) => {
   }, [children]);
 
   return (
-    <div className={className}>
+    <div style={style} className={className}>
       {React.Children.map(children, (child, i) => (
         <div
           className={`${

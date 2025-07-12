@@ -21,7 +21,13 @@
 
 /* Base (mobile first) */
 html {
+  scroll-behavior: smooth;
   font-size: 15px;
+}
+
+::selection {
+  background-color: #7843e9;
+  color: #fff;
 }
 
 /* Tablets and up */

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="hero-height-vh mt-20">
+    <div className="hero-height-vh mt-20 relative">
       <Image
         alt="hero background"
         src={"/common-bg.svg"}
@@ -25,7 +25,11 @@ const Hero = () => {
           </p>
         </Observer>
 
-        <PurpleButton text="projects" href="/" />
+        <PurpleButton
+          text="projects"
+          href="/"
+          ariaLabel="navigate to projects"
+        />
       </div>
     </div>
   );
