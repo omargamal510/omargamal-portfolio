@@ -10,10 +10,10 @@ const Hero = () => {
         alt="hero background"
         src={"/common-bg.svg"}
         fill
-        className="size-full"
+        className="size-full opacity-50"
       />
 
-      <div className="overlay absolute inset-0 bg-gray-200/70 flex-center flex-col gap-8">
+      <div className="overlay absolute inset-0  flex-center flex-col gap-8">
         <h1 className="text-[2.5rem]  px-20 text-center font-black uppercase">
           <HeroHeader textProp="Hello , I'm Omar Gamal" />
         </h1>
@@ -26,8 +26,9 @@ const Hero = () => {
         </Observer>
 
         <PurpleButton
+          target="_self"
           text="projects"
-          href="/"
+          href="#projects"
           ariaLabel="navigate to projects"
         />
       </div>

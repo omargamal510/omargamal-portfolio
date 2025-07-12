@@ -92,7 +92,12 @@ const About = () => {
             </Observer>
           </div>
 
-          <PurpleButton text="contact" href="/" ariaLabel="contact" />
+          <PurpleButton
+            target="_self"
+            text="contact"
+            href="#contact"
+            ariaLabel="contact"
+          />
         </div>
         <div className="w-full flex flex-col gap-5">
           <h3 className="text-2xl font-bold">My Skills</h3>

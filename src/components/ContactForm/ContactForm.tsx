@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 
 interface formInputsTypes {
@@ -34,6 +35,8 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [isSubmitting, setisSubmitting] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -47,6 +50,8 @@ const ContactForm = () => {
     formData.append("name", form.name);
     formData.append("email", form.email);
     formData.append("message", form.message);
+
+    setisSubmitting(true);
 
     try {
       await fetch(FORMSPREE_ENDPOINT, {
@@ -62,6 +67,8 @@ const ContactForm = () => {
     } catch (error) {
       alert("Error sending message.");
       console.error(error);
+    } finally {
+      setisSubmitting(false);
     }
   };
 
@@ -89,7 +96,7 @@ const ContactForm = () => {
             <input
               required
               name={type === "email" ? "email" : "name"}
-              className="text-sm outline-0 bg-gray-100 py-5 rounded-lg px-2 w-full"
+              className="text-sm outline-0 bg-gray-100 py-5 font-medium rounded-lg px-2 w-full"
               type={type}
               placeholder={placeholder}
               value={type === "email" ? form.email : form.name}
@@ -99,9 +106,10 @@ const ContactForm = () => {
         </div>
       ))}
 
-      <button className="bg-main-purple text-white px-10 py-3 rounded-lg cursor-pointer">
-        Submit
+      <button className="bg-main-purple hover:opacity-75 transition-300 text-white px-20 py-3 rounded-lg cursor-pointer">
+        {isSubmitting ? "..." : "Submit"}
       </button>
+      {/* <Alert /> */}
     </form>
   );
 };

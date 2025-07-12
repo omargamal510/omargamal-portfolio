@@ -3,7 +3,7 @@ import Observer from "@/ui/Observer";
 import PurpleButton from "@/ui/PurpleButton";
 import Image from "next/image";
 
-const SingleProject = ({ title, description, src }: ProjectTypes) => {
+const SingleProject = ({ title, description, src, href }: ProjectTypes) => {
   return (
     <div className="flex-center lg:flex-row flex-col gap-2 md:gap-10 ">
       <Observer>
@@ -25,8 +25,9 @@ const SingleProject = ({ title, description, src }: ProjectTypes) => {
           </p>
 
           <PurpleButton
-            text="See more"
-            href="/"
+            target="_blank"
+            text="Live Preview </>"
+            href={href}
             ariaLabel={`navigate ${title}`}
           />
         </div>

@@ -4,15 +4,15 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div id="contact" className="relative">
+    <div id="contact" className="relative ">
       <Image
         alt="contact us background"
         src={"/common-bg.svg"}
         fill
-        className="size-full z-[-1]"
+        className="size-full z-[-1] opacity-40"
       />
 
-      <div className="flex-center flex-col">
+      <div className="flex-center flex-col ">
         <SectionHeader
           title="contact"
           description="Feel free to reach me out through submitting the form below and i will respond as fast as possible"

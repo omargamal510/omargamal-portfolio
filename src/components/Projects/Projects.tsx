@@ -6,6 +6,7 @@ export interface ProjectTypes {
   title: string;
   description: string;
   src: string;
+  href: string;
 }
 
 const projects: ProjectTypes[] = [
@@ -14,6 +15,7 @@ const projects: ProjectTypes[] = [
     description:
       "A vibrant event focused on 3D/CGI, architectural visualization, digital fashion, and photography. Studio Night 5 highlighted digital creativity and innovation while bringing together Egypt’s creative community — a celebration of artistic expression powered by NVIDIA technologies.",
     src: "/nvidia.png",
+    href: "https://www.nvidiasn5.com/ar",
   },
 
   {
@@ -21,6 +23,7 @@ const projects: ProjectTypes[] = [
     description:
       "A global creative agency offering tailored digital and business solutions. From branding to development, we help businesses transform ideas into impactful results across the world.",
     src: "/nobles.webp",
+    href: "https://www.noblesgs.com/",
   },
 
   {
@@ -28,6 +31,7 @@ const projects: ProjectTypes[] = [
     description:
       "An epic gaming and entertainment event held in Tahrir Square during Ramadan 2025. Ramadan Raid 25 brings together players, fans, and creators for a vibrant celebration of games, tech, and community.",
     src: "/raid.png",
+    href: "https://www.ramadanraid25.arabhardware.com/",
   },
 
   // {
@@ -54,9 +58,10 @@ const Projects = () => {
       </Observer>
 
       <div className="flex flex-col gap-20">
-        {projects.map(({ title, description, src }, index) => (
+        {projects.map(({ title, description, src, href }, index) => (
           <SingleProject
             key={index}
+            href={href}
             title={title}
             description={description}
             src={src}
