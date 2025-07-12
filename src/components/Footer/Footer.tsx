@@ -1,5 +1,3 @@
-import { Github, Linkedin } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="bg-black text-white flex-center flex-col gap-14 md:px-0 px-8 py-14">

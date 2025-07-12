@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface PurpleButtonProps {
   text: string;
   href: string;
