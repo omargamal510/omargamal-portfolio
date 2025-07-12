@@ -32,13 +32,13 @@ const SmNav = () => {
           isOpen ? "block" : "hidden"
         } opacity-0`}
       >
-        {NavbarLinks.map((e) => (
+        {NavbarLinks.map(({ link, to }, index) => (
           <Link
-            href={"/"}
             className="py-3 block text-lg font-bold cursor-pointer px-12 border-1 transition-300 hover:text-main-purple border-gray-100"
-            key={e}
+            href={to}
+            key={index}
           >
-            {e}
+            {link}
           </Link>
         ))}
       </div>

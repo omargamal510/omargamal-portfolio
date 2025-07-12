@@ -52,7 +52,7 @@ const Observer = ({
     <div style={style} className={className}>
       {React.Children.map(children, (child, i) => (
         <div
-          className={`${
+          className={` ${
             yaxis ? "translate-y-12" : "translate-x-12"
           }  opacity-0 transition-800`}
           ref={(el) => {

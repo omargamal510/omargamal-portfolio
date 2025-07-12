@@ -14,7 +14,7 @@ const PurpleButton = ({
   return (
     <button
       aria-label={ariaLabel}
-      className="bg-main-purple w-48 text-lg font-bold uppercase text-white h-12  rounded-lg cursor-pointer"
+      className="bg-main-purple hover:opacity-80 transition-300 w-48 text-lg font-bold uppercase text-white h-12  rounded-lg cursor-pointer"
     >
       <Link className="size-full flex-center block border" href={href}>
         {text}

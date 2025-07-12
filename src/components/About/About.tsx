@@ -37,7 +37,7 @@ const skills: SkillsArray[] = [
 
 const About = () => {
   return (
-    <div className="bg-white-gray">
+    <div id="about" className="bg-white-gray">
       <Observer yaxis={true}>
         <SectionHeader
           title="about me"

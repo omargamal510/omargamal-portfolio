@@ -2,7 +2,27 @@ import SmNav from "@/components/Navbar/SmNav";
 import Image from "next/image";
 import Link from "next/link";
 
-export const NavbarLinks: string[] = ["Home", "About", "Projects", "Contact"];
+export const NavbarLinks = [
+  {
+    link: "home",
+    to: "#",
+  },
+
+  {
+    link: "about",
+    to: "#about",
+  },
+
+  {
+    link: "projects",
+    to: "#projects",
+  },
+
+  {
+    link: "contact",
+    to: "#contact",
+  },
+];
 
 const Navbar = () => {
   return (
@@ -25,14 +45,14 @@ const Navbar = () => {
       </Link>
 
       <div className="items-center font-bold justify-center gap-20 md:flex hidden ">
-        {NavbarLinks.map((e) => (
-          <Link
+        {NavbarLinks.map(({ link, to }, index) => (
+          <a
             className="hover:text-main-purple transition-300 uppercase"
-            href={"/"}
-            key={e}
+            href={to}
+            key={index}
           >
-            {e}
-          </Link>
+            {link}
+          </a>
         ))}
       </div>
 

@@ -45,7 +45,7 @@ const projects: ProjectTypes[] = [
 
 const Projects = () => {
   return (
-    <div>
+    <div id="projects">
       <Observer yaxis={true}>
         <SectionHeader
           title="projects"
