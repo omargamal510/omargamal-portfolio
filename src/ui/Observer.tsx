@@ -6,7 +6,7 @@ interface ObserverProps {
   children: React.ReactNode;
   yaxis?: boolean;
   className?: string;
-  style?: any;
+  style?: React.CSSProperties;
 }
 
 const Observer = ({
